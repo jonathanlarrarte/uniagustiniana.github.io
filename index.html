@@ -1,0 +1,20 @@
+
+<!DOCTYPE html>
+<html>  
+  <head>
+    <!-- Augmented Reality on the Web in 10 lines of html! https://github.com/jeromeetienne/ar.js --> 
+<script src="https://aframe.io/releases/1.0.0/aframe.min.js"></script>
+<script src="https://raw.githack.com/jeromeetienne/AR.js/2.2.0/aframe/build/aframe-ar.js"></script>
+<script>THREEx.ArToolkitContext.baseURL = 'https://rawgit.com/jeromeetienne/ar.js/master/three.js/'</script>
+</head>   
+<body style=’margin : 0px; overflow: hidden;’>
+<a-scene embedded arjs=’sourceType: webcam;’>
+<a-entity 
+            obj-model=”obj: url(/path/to/campus.obj); 
+            mtl: url(/path/to/nameOfFile.mtl)”>
+ </a-entity>
+<a-marker-camera  type = 'pattern'  patternurl = 'path/to/pattern-images.patt'> </a-marker-camera >
+<a-marker  type = 'pattern'  patternurl = 'path/to/pattern-images.patt' > </a-marker>  
+</a-scene>  
+</body>
+</html>
